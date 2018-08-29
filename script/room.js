@@ -7,7 +7,7 @@ var Room = {
 	_ROOM_WARM_DELAY: 30 * 1000, // time between room temperature updates
 	_BUILDER_STATE_DELAY: 0.5 * 60 * 1000, // time between builder state updates
 	_STOKE_COOLDOWN: 10, // cooldown to stoke the fire
-	_NEED_WOOD_DELAY: 15 * 1000, // from when the stranger shows up, to when you need wood
+	_NEED_WOOD_DELAY: 1 * 1, // from when the stranger shows up, to when you need wood
 	
 	buttons:{},
 	
@@ -15,15 +15,14 @@ var Room = {
 		'trap': {
 			name: _('trap'),
 			button: null,
-			maximum: 10,
+			maximum: 100,
 			availableMsg: _('builder says she can make traps to catch any creatures might still be alive out there'),
 			buildMsg: _('more traps to catch more creatures'),
 			maxMsg: _("more traps won't help now"),
 			type: 'building',
 			cost: function() {
-				var n = $SM.get('game.buildings["trap"]', true);
 				return {
-					'wood': 10 + (n*10)
+					'wood': 1
 				};
 			}
 		},
