@@ -124,7 +124,7 @@
                     Engine.setTimeout(function () {
                       DropboxConnector.log('Save to slot ' + n);
                       DropboxConnector.saveGameToDropbox(n, DropboxConnector.savedtoDropboxEvent);
-                    }, 1000);
+                    }, 1);
                   }
                 };
               });
