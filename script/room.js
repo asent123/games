@@ -29,7 +29,7 @@ var Room = {
 		'cart': {
 			name: _('cart'),
 			button: null,
-			maximum: 1,
+			maximum: 100,
 			availableMsg: _('builder says she can make a cart for carrying wood'),
 			buildMsg: _('the rickety cart will carry more wood from the forest'),
 			type: 'building',
@@ -63,7 +63,7 @@ var Room = {
 			type: 'building',
 			cost: function() {
 				return {
-					wood: 200,
+					wood: 20,
 					fur: 10,
 					meat: 5
 				};
