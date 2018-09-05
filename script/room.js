@@ -63,7 +63,7 @@ var Room = {
 			type: 'building',
 			cost: function() {
 				return {
-					wood: 200,
+					wood: 20,
 					fur: 10,
 					meat: 5
 				};
